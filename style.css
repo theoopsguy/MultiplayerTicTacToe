@@ -25,6 +25,7 @@ nav {
   grid-template-columns: repeat(3, 10vw);
   grid-template-rows: repeat(3, 10vw);
   font-style: "Roboto", sans-serif;
+  position: relative;
 }
 
 .box {
@@ -48,16 +49,25 @@ nav {
   padding-bottom: 4em;
 }
 
+.gameContainer h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
 .info {
     display: flex;
     margin: 1.5em 0em;
     justify-content: center;
 }
 
-.gameContainer h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1em;
+.winningLine {
+    height: 5px;
+    width: 0vw;
+    background-color: #218CF5;
+    position: absolute;
+    /* transform: translate(5vw, 15vw) rotate(90deg); */
+    transition: width 0.2s ease-in-out;
 }
 
 .imgBox {
@@ -138,5 +148,8 @@ nav {
     .container {
         grid-template-columns: repeat(3, 20vw);
         grid-template-rows: repeat(3, 20vw);
-      }
+    }
+    .gameInfo {
+        margin-top: 5em;
+    }
 }
